@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uma Pergunta...</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Tela Inicial -->
+    <section id="intro" class="screen active">
+        <h1>Hey, Drika ❤️</h1>
+        <p>Tenho uma pergunta para você...</p>
+
+        <button onclick="startQuestion()">
+            Continuar
+        </button>
+    </section>
+
+    <!-- Pergunta -->
+    <section id="question" class="screen">
+
+        <h1>Você aceitaria sair comigo?</h1>
+
+        <div class="buttons" id="buttonArea">
+
+            <button id="yesBtn" onclick="accepted()">
+                SIM ❤️
+            </button>
+
+            <button id="noBtn">
+                NÃO 😒
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Surpresa -->
+    <section id="surprise" class="screen">
+
+        <h1>ESPERA... 😳</h1>
+
+        <p>Você realmente clicou em SIM?</p>
+
+        <button onclick="continueStory()">
+            Sim.
+        </button>
+
+    </section>
+
+    <!-- Final -->
+    <section id="final" class="screen">
+
+        <h1>Convite Oficial Aceito 🎉</h1>
+
+        <p>
+            Agora só precisamos decidir:
+        </p>
+
+        <ul>
+            <li>📅 Quando?</li>
+            <li>📍 Onde?</li>
+            <li>🍔 O que vamos comer?</li>
+        </ul>
+
+        <p>
+            Estou ansioso para isso ❤️
+        </p>
+
+    </section>
+
+    <section id="schedule" class="screen">
+
+    <h1>Você fez meu dia ❤️</h1>
+
+<p>
+Agora escolha uma data para criarmos uma boa memória juntos.
+</p>
+
+    <div class="form-container">
+
+        <label>📅 Data</label>
+        <input type="date" id="date">
+
+        <label>🕒 Horário</label>
+        <input type="time" id="time">
+
+        <label>📝 Observação (opcional)</label>
+        <textarea
+            id="obs"
+            placeholder="Ex.: Quero pizza 🍕"
+        ></textarea>
+
+        <button class="primary-btn" onclick="sendConfirmation()">
+    Confirmar nosso encontro ❤️
+        </button>
+
+    </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
