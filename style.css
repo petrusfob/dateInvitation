@@ -4,34 +4,24 @@
     box-sizing:border-box;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#ffe6ee;
-    color:#222;
-
-    width:100vw;
-    height:100vh;
-
-    overflow:hidden;
+body {
+    background: linear-gradient(
+        135deg,
+        #ff9a9e,
+        #fad0c4,
+        #ffd1ff
+    );
 }
 
-.screen{
-    display:none;
-
-    width:100%;
-    height:100%;
-
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
-    padding:20px;
+.screen {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
 }
 
-.screen.active{
-    display:flex;
+.screen.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 h1{
