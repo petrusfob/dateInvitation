@@ -37,6 +37,26 @@ function continueStory() {
     showScreen("schedule");
 }
 
+function createHeart() {
+    const heart = document.createElement("div");
+
+    heart.innerHTML = "❤️";
+    heart.classList.add("heart");
+
+    heart.style.left =
+        Math.random() * window.innerWidth + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 3000);
+}
+
+for (let i = 0; i < 20; i++) {
+    setTimeout(createHeart, i * 100);
+}
+
 function moveButton() {
 
     const area = document.getElementById("buttonArea");
