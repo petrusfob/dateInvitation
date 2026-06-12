@@ -30,6 +30,14 @@ function startQuestion() {
 }
 
 function accepted() {
+
+    for(let i = 0; i < 20; i++) {
+
+        setTimeout(() => {
+            createHeart();
+        }, i * 100);
+    }
+
     showScreen("surprise");
 }
 
